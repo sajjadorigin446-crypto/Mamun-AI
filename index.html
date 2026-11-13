@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Mamun AI - Your personal intelligent assistant.">
+  <title>Mamun AI | Personal AI Assistant</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">M</div>
+      <div>
+        <h2>Mamun <span>AI</span></h2>
+        <small>PERSONAL ASSISTANT</small>
+      </div>
+      <button class="icon-btn close-sidebar" id="closeSidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <button class="new-chat" id="newChat">
+      <i class="fa-solid fa-plus"></i>
+      <span>New Chat</span>
+    </button>
+
+    <div class="side-label">YOUR CONVERSATIONS</div>
+    <div class="history-list" id="historyList"></div>
+
+    <div class="sidebar-bottom">
+      <div class="profile">
+        <div class="avatar">M</div>
+        <div class="profile-info">
+          <strong>MD Abdul Al Mamun</strong>
+          <small>Personal Workspace</small>
+        </div>
+        <button class="icon-btn" id="clearHistory" title="Clear history">
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="overlay"></div>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="topbar">
+      <div class="top-left">
+        <button class="icon-btn menu-btn" id="menuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="top-brand">Mamun <span>AI</span></div>
+      </div>
+
+      <div class="top-actions">
+        <div class="status">
+          <span class="status-dot"></span>
+          <span id="connectionStatus">Connecting</span>
+        </div>
+        <button class="icon-btn" id="newChatTop" title="New chat">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+    </header>
+
+    <section class="chat-area" id="chatArea">
+
+      <!-- WELCOME -->
+      <div class="welcome" id="welcome">
+        <div class="welcome-icon">
+          <span>M</span>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+        </div>
+
+        <div class="welcome-tag">YOUR PERSONAL AI</div>
+        <h1>Welcome to <span>Mamun AI</span></h1>
+        <p>Your ideas deserve intelligence. Ask anything, explore everything.</p>
+
+        <div class="suggestions">
+          <button class="suggestion" data-prompt="Introduce yourself.">
+            <i class="fa-regular fa-user"></i>
+            <span>Introduce yourself</span>
+          </button>
+
+          <button class="suggestion" data-prompt="Help me write a professional email.">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Write an email</span>
+          </button>
+
+          <button class="suggestion" data-prompt="Teach me JavaScript from beginner to advanced.">
+            <i class="fa-solid fa-code"></i>
+            <span>Learn coding</span>
+          </button>
+
+          <button class="suggestion" data-prompt="Give me some creative business ideas.">
+            <i class="fa-regular fa-lightbulb"></i>
+            <span>Explore ideas</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- MESSAGES -->
+      <div class="messages" id="messages"></div>
+
+    </section>
+
+    <!-- INPUT -->
+    <footer class="composer-area">
+      <div class="composer">
+
+        <input type="file" id="fileInput" hidden>
+
+        <button class="composer-btn" id="attachBtn" title="Upload file">
+          <i class="fa-solid fa-paperclip"></i>
+        </button>
+
+        <textarea id="messageInput"
+          placeholder="Message Mamun AI..."
+          rows="1"></textarea>
+
+        <select id="modelSelect" title="Choose model">
+          <option value="4o-mini">4o Mini</option>
+          <option value="gpt-4o">GPT-4o</option>
+          <option value="gpt-4-turbo">GPT-4 Turbo</option>
+          <option value="o1-mini">o1 Mini</option>
+        </select>
+
+        <button class="send-btn" id="sendBtn" title="Send message">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+
+      <div class="composer-note">
+        Mamun AI can make mistakes. Verify important information.
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
